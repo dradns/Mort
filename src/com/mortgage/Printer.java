@@ -11,12 +11,12 @@ public class Printer {
         System.out.println("Monthly Payments: " + mortgageFormatted);
     }
 
-    static void printPaymentSchedule(int totalCapital, float annualInterest, byte years) {
+    static void printPaymentSchedule(Maker maker) {
         System.out.println();
         System.out.println("PAYMENT SCHEDULE");
         System.out.println("----------------");
-        for (short month = 1; month <= years * GlobalStore.MONTHS_IN_YEAR; month++) {
-            double balance = Mortgage.calculateBalance(totalCapital, annualInterest, years, month);
+        for (short month = 1; month <= maker.totalMortgageYears * GlobalStorage.MONTHS_IN_YEAR; month++) {
+            double balance = Mortgage.calculateBalance(maker, month);
             System.out.println(NumberFormat.getCurrencyInstance().format(balance));
         }
     }

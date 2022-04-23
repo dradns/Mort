@@ -2,15 +2,11 @@ package com.mortgage;
 
 public class Main {
     public static void main(String[] args) {
-        int totalCapital = (int) Reader.readTotalCapital();
-        float annualInterest = (float) Reader.readAnnualPercent();
-        byte totalMortgageYears = (byte) Reader.readTotalMortgageYears();
-
-        double mortgage = Mortgage.calculateMortgage(totalCapital,annualInterest, totalMortgageYears);
+        var maker = new Maker();
+        double mortgage = Mortgage.calculateMortgage(maker);
 
         Printer.printMonthlyPayment(mortgage);
-        Printer.printPaymentSchedule(totalCapital, annualInterest, totalMortgageYears);
+        Printer.printPaymentSchedule(maker);
     }
-
 }
 

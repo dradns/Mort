@@ -1,6 +1,6 @@
 package com.mortgage;
 
-final class GlobalStore {
+public final class GlobalStorage {
 
     final static byte MONTHS_IN_YEAR = 12;
     final static byte PERCENT = 100;
@@ -14,6 +14,6 @@ final class GlobalStore {
     final static int TOTAL_MORTGAGE_YEARS_MIN = 1;
     final static int TOTAL_MORTGAGE_YEARS_MAX = 27;
 
-    private GlobalStore() {
+    private GlobalStorage() {
     }
 }
