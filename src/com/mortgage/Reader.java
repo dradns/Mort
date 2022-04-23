@@ -3,16 +3,15 @@ package com.mortgage;
 import java.util.Scanner;
 
 public class Reader {
-
     public static double readAnnualPercent() {
         Scanner scanner = new Scanner(System.in);
         double value;
         while (true) {
             System.out.print("Annual Interest Rate: ");
             value = scanner.nextFloat();
-            if (value >= GlobalStore.ANNUAL_ITEREST_RATE_MIN && value <= GlobalStore.ANNUAL_ITEREST_RATE_MAX)
+            if (value >= GlobalStore.ANNUAL_INTEREST_RATE_MIN && value <= GlobalStore.ANNUAL_INTEREST_RATE_MAX)
                 break;
-            System.out.println("Enter a value between " + GlobalStore.ANNUAL_ITEREST_RATE_MIN + " and " + GlobalStore.ANNUAL_ITEREST_RATE_MAX);
+            System.out.println("Enter a value between " + GlobalStore.ANNUAL_INTEREST_RATE_MIN + " and " + GlobalStore.ANNUAL_INTEREST_RATE_MAX);
         }
         return value;
     }
