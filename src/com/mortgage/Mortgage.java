@@ -1,5 +1,7 @@
 package com.mortgage;
 
+import com.mortgage.constant.GlobalStorage;
+
 public class Mortgage {
 
     public static double calculateMortgage(Maker maker) {

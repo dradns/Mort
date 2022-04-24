@@ -1,5 +1,7 @@
 package com.mortgage;
 
+import com.mortgage.constant.GlobalStorage;
+
 import java.util.Scanner;
 
 public class Maker {
